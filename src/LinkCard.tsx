@@ -39,6 +39,10 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    &.persoonlijk .h-link-card {
+        color: #e57e30;
+    }
+
     > a {
         display: block;
         font-family: 'ProximaNovaRegular', sans-serif;
