@@ -1,6 +1,6 @@
 {
   "name": "@fdmg/fd-link-card",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "FD-themed link card",
   "types": "dist/LinkCard.d.ts",
   "main": "dist/link-card.js",
@@ -62,8 +62,8 @@
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {
-    "@fdmg/fd-card": "^1.0.2",
-    "@fdmg/fd-typography": "^1.0.23",
+    "@fdmg/fd-card": "^1.0.4",
+    "@fdmg/fd-typography": "^1.0.24",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "styled-components": "^4.1.3",
