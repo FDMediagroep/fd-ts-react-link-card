@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkCard renders correctly 1`] = `
+<div
+  className="fd-card fd-card-link-card"
+>
+  <h3
+    className="fd-typography card-h h-link-card"
+    textStyle="card-h"
+  >
+    Beheer
+  </h3>
+  <a
+    href="/mijn-nieuws"
+  >
+    Beheer uw nieuwsbriefinstellingen
+     
+    <i
+      className="icon-chevron-right"
+    />
+  </a>
+</div>
+`;
+
+exports[`LinkCard renders correctly 2`] = `
+<div
+  className="fd-card fd-card-link-card class-name"
+>
+  <h3
+    className="fd-typography card-h h-link-card"
+    textStyle="card-h"
+  >
+    Nieuwsbrief
+  </h3>
+  <a
+    href="/mijn-nieuws"
+  >
+    Beheer uw nieuwsbriefinstellingen
+     
+    <i
+      className="icon-chevron-right"
+    />
+  </a>
+</div>
+`;
