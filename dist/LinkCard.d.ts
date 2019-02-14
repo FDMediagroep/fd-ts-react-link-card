@@ -1,5 +1,7 @@
 import { PureComponent } from "react";
+import { CardTypes } from "@fdmg/fd-card";
 export interface Props {
+    cardStyle: CardTypes;
     className?: string;
     link: string;
     linkText?: string;

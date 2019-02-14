@@ -1,9 +1,10 @@
 import React, { PureComponent } from "react";
-import Card, { CardStyle } from "@fdmg/fd-card";
+import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, { getAllTextStyles } from "@fdmg/fd-typography";
 import { createGlobalStyle } from "styled-components";
 
 export interface Props {
+    cardStyle: CardTypes;
     className?: string;
     link: string;
     linkText?: string;
@@ -16,7 +17,7 @@ export default class LinkCard extends PureComponent<Props, any> {
         return (
             <>
                 <GlobalStyle/>
-                <Card className={`fd-card-link-card${this.props.className ? ` ${this.props.className}` : ''}`}>
+                <Card cardStyle={this.props.cardStyle} className={`fd-card-link-card${this.props.className ? ` ${this.props.className}` : ''}`}>
                     <TypoGraphy className="h-link-card" textStyle='card-h'><h3>{this.props.title ? this.props.title : 'Beheer'}</h3></TypoGraphy>
                     <a href={this.props.link}>{this.props.linkText ? this.props.linkText : 'Beheer uw nieuwsbriefinstellingen'} <i className="icon-chevron-right"/></a>
                 </Card>

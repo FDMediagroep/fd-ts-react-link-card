@@ -2,11 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import LinkCard from '../src/LinkCard';
-import uniqid from 'uniqid';
 
 const GlobalStyles = createGlobalStyle`
-    body {
-        background-color: #f1ded0;
+    .content-area {
+        padding: 1rem 0;
+        &.overview {
+            background-color: #f1ded0;
+        }
+        &.persoonlijk {
+            background-color: #ffffff;
+        }
     }
     div {
         margin-bottom: 1rem;
@@ -14,14 +19,43 @@ const GlobalStyles = createGlobalStyle`
 `;
 
 ReactDOM.render(<>
-        <GlobalStyles/>
+    <GlobalStyles/>
 
-        <div>
-            <LinkCard
-                link="/mijn-nieuws"
-                linkText="Beheer uw nieuwsbriefinstellingen"
-                title="Nieuwsbrief"
-            />
-        </div>
-    </>,
-    document.getElementById('root'));
+    <div>
+        <LinkCard
+            cardStyle="default"
+            link="/mijn-nieuws"
+            linkText="Beheer uw nieuwsbriefinstellingen"
+            title="Nieuwsbrief"
+        />
+    </div>
+</>,
+document.querySelector('.overview aside'));
+
+ReactDOM.render(<>
+    <GlobalStyles/>
+
+    <div>
+        <LinkCard
+            cardStyle="article"
+            link="/mijn-nieuws"
+            linkText="Beheer uw nieuwsbriefinstellingen"
+            title="Nieuwsbrief"
+        />
+    </div>
+</>,
+document.querySelector('.article aside'));
+
+ReactDOM.render(<>
+    <GlobalStyles/>
+
+    <div>
+        <LinkCard
+            cardStyle="persoonlijk"
+            link="/mijn-nieuws"
+            linkText="Beheer uw nieuwsbriefinstellingen"
+            title="Nieuwsbrief"
+        />
+    </div>
+</>,
+document.querySelector('.persoonlijk aside'));
