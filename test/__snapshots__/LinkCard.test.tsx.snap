@@ -6,7 +6,7 @@ exports[`LinkCard renders correctly 1`] = `
   className="fd-card fd-card-link-card default"
 >
   <h3
-    className="fd-typography card-h h-link-card"
+    className="fd-typography card-h fd-link-card-h"
     textStyle="card-h"
   >
     Beheer
@@ -29,7 +29,7 @@ exports[`LinkCard renders correctly 2`] = `
   className="fd-card fd-card-link-card class-name article"
 >
   <h3
-    className="fd-typography card-h h-link-card"
+    className="fd-typography card-h fd-link-card-h"
     textStyle="card-h"
   >
     Nieuwsbrief

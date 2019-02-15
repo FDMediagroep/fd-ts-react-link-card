@@ -18,7 +18,7 @@ export default class LinkCard extends PureComponent<Props, any> {
             <>
                 <GlobalStyle/>
                 <Card cardStyle={this.props.cardStyle} className={`fd-card-link-card${this.props.className ? ` ${this.props.className}` : ''}`}>
-                    <TypoGraphy className="h-link-card" textStyle='card-h'><h3>{this.props.title ? this.props.title : 'Beheer'}</h3></TypoGraphy>
+                    <TypoGraphy className="fd-link-card-h" textStyle='card-h'><h3>{this.props.title ? this.props.title : 'Beheer'}</h3></TypoGraphy>
                     <a href={this.props.link}>{this.props.linkText ? this.props.linkText : 'Beheer uw nieuwsbriefinstellingen'} <i className="icon-chevron-right"/></a>
                 </Card>
             </>
@@ -28,7 +28,7 @@ export default class LinkCard extends PureComponent<Props, any> {
 
 const GlobalStyle = createGlobalStyle`
 .fd-card-link-card {
-    .h-link-card,
+    .fd-link-card-h,
     > a {
         padding: 12px 10px;
         @media only screen and (min-width: 641px) {
@@ -37,10 +37,6 @@ const GlobalStyle = createGlobalStyle`
         @media only screen and (min-width: 861px) {
             padding: 12px 15px;
         }
-    }
-
-    &.persoonlijk .h-link-card {
-        color: #e57e30;
     }
 
     > a {
