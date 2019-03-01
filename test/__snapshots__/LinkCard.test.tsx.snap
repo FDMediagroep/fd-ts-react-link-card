@@ -3,7 +3,7 @@
 exports[`LinkCard renders correctly 1`] = `
 <div
   cardStyle="default"
-  className="fd-card fd-card-link-card default"
+  className="fd-card fd-link-card default"
 >
   <h3
     className="fd-typography card-h fd-link-card-h"
@@ -26,7 +26,7 @@ exports[`LinkCard renders correctly 1`] = `
 exports[`LinkCard renders correctly 2`] = `
 <div
   cardStyle="article"
-  className="fd-card fd-card-link-card class-name article"
+  className="fd-card fd-link-card class-name article"
 >
   <h3
     className="fd-typography card-h fd-link-card-h"
