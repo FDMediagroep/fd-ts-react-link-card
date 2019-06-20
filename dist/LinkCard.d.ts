@@ -10,4 +10,4 @@ export interface Props {
 export default class LinkCard extends PureComponent<Props, any> {
     render(): JSX.Element;
 }
-export declare const LinkCardStyle: import("styled-components").GlobalStyleComponent<{}, import("styled-components").DefaultTheme>;
+export declare const LinkCardStyle: import("styled-components").FlattenSimpleInterpolation;

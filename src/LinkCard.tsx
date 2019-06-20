@@ -1,7 +1,7 @@
 import React, { PureComponent } from "react";
 import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, { getAllTextStyles } from "@fdmg/fd-typography";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 
 export interface Props {
     cardStyle: CardTypes;
@@ -26,7 +26,7 @@ export default class LinkCard extends PureComponent<Props, any> {
     }
 }
 
-const GlobalStyle = createGlobalStyle`
+const styles = css`
 .fd-link-card {
     .fd-link-card-h,
     > a {
@@ -70,8 +70,10 @@ const GlobalStyle = createGlobalStyle`
 }
 `;
 
-export const LinkCardStyle = createGlobalStyle`
-    ${(CardStyle as any).globalStyle.rules}
-    ${getAllTextStyles(['card-h']).globalStyle.rules}
-    ${(GlobalStyle as any).globalStyle.rules}
+const GlobalStyle = createGlobalStyle`${styles}`;
+
+export const LinkCardStyle = css`
+    ${CardStyle}
+    ${getAllTextStyles(['card-h'])}
+    ${styles}
 `;
