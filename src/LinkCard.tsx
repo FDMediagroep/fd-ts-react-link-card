@@ -73,7 +73,7 @@ const styles = css`
 const GlobalStyle = createGlobalStyle`${styles}`;
 
 export const LinkCardStyle = css`
-    ${CardStyle}
-    ${getAllTextStyles(['card-h'])}
-    ${styles}
+${CardStyle}
+${getAllTextStyles(['card-h'])}
+${styles}
 `;
