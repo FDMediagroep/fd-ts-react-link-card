@@ -1,4 +1,4 @@
-import React, { PureComponent } from "react";
+import React from "react";
 import Card, { CardStyle, CardTypes } from "@fdmg/fd-card";
 import TypoGraphy, { getAllTextStyles } from "@fdmg/fd-typography";
 import { createGlobalStyle, css } from "styled-components";
@@ -11,19 +11,16 @@ export interface Props {
     title?: string;
 }
 
-export default class LinkCard extends PureComponent<Props, any> {
-
-    render() {
-        return (
-            <>
-                <GlobalStyle/>
-                <Card cardStyle={this.props.cardStyle} className={`fd-link-card${this.props.className ? ` ${this.props.className}` : ''}`}>
-                    <TypoGraphy className="fd-link-card-h" textStyle='card-h'><h3>{this.props.title ? this.props.title : 'Beheer'}</h3></TypoGraphy>
-                    <a href={this.props.link}>{this.props.linkText ? this.props.linkText : 'Beheer uw nieuwsbriefinstellingen'} <i className="icon-chevron-right"/></a>
-                </Card>
-            </>
-        );
-    }
+export default function LinkCard(props: Props) {
+    return (
+        <>
+            <GlobalStyle/>
+            <Card cardStyle={props.cardStyle} className={`fd-link-card${props.className ? ` ${props.className}` : ''}`}>
+                <TypoGraphy className="fd-link-card-h" textStyle='card-h'><h3>{props.title ? props.title : 'Beheer'}</h3></TypoGraphy>
+                <a href={props.link}>{props.linkText ? props.linkText : 'Beheer uw nieuwsbriefinstellingen'} <i className="icon-chevron-right"/></a>
+            </Card>
+        </>
+    );
 }
 
 const styles = css`
@@ -70,10 +67,10 @@ const styles = css`
 }
 `;
 
-const GlobalStyle = createGlobalStyle`${styles}`;
-
 export const LinkCardStyle = css`
 ${CardStyle}
 ${getAllTextStyles(['card-h'])}
 ${styles}
 `;
+
+const GlobalStyle = createGlobalStyle`${LinkCardStyle}`;

@@ -1,6 +1,6 @@
 {
   "name": "@fdmg/fd-link-card",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "FD-themed link card",
   "types": "dist/LinkCard.d.ts",
   "main": "dist/link-card.js",
